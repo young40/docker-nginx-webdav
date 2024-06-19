@@ -2,6 +2,8 @@ FROM arm64v8/nginx:latest
 
 LABEL maintainer="maltokyo"
 
+Run rm -rf /etc/apt/sources.list.d/passenger.list
+
 RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y nginx-extras apache2-utils
 
 
